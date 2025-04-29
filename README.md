@@ -27,13 +27,19 @@ Product Information Extraction Layer
 Product Recommendation Layer
 Major functions behind the Chatbot Let's now look at a brief overview of the major functions that form the chatbot.
 
-initialize_conversation(): This initializes the variable conversation with the system message.
-get_chat_model_completions(): This takes the ongoing conversation as the input and returns the response by the assistant
-moderation_check(): This checks if the user's or the assistant's message is inappropriate. If any of these is inappropriate, it ends the conversation.
-intent_confirmation_layer(): This function takes the assistant's response and evaluates if the chatbot has captured the user's profile clearly. Specifically, this checks if the following properties for the user has been captured or not. Country, City, Cuisine, Price Preference
-dictionary_present(): This function checks if the final understanding of user's profile is returned by the chatbot as a python dictionary or not. If there is a dictionary, it extracts the information as a Python dictionary.
-compare_restaurant_with_user(): This function compares the user's requirements with the different restaurant packages and come back with the top recommendations.
-initialize_conv_reco(): Initializes the recommendations conversation
+** initialize_conversation(): This initializes the variable conversation with the system message.
+
+** get_chat_model_completions(): This takes the ongoing conversation as the input and returns the response by the assistant
+
+** moderation_check(): This checks if the user's or the assistant's message is inappropriate. If any of these is inappropriate, it ends the conversation.
+
+** intent_confirmation_layer(): This function takes the assistant's response and evaluates if the chatbot has captured the user's profile clearly. Specifically, this checks if the following properties for the user has been captured or not. Country, City, Cuisine, Price Preference
+
+** dictionary_present(): This function checks if the final understanding of user's profile is returned by the chatbot as a python dictionary or not. If there is a dictionary, it extracts the information as a Python dictionary.
+
+** compare_restaurant_with_user(): This function compares the user's requirements with the different restaurant packages and come back with the top recommendations.
+
+** initialize_conv_reco(): Initializes the recommendations conversation
 
 **Part 3:** 
 Implementation Implementing Intent Clarity & Intent Confirmation layers Let's start with the first part of the implementation - building the intent clarity and intent confirmation layers. 
