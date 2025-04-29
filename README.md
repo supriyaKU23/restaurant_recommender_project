@@ -1,6 +1,7 @@
 **Restaurant Recommender AI Chatbot**
-Part 1: Introduction
-Project Background
+
+**Part 1: Introduction**
+**Project Background**
 
 In today’s fast-paced lifestyle, deciding where to eat can often become overwhelming due to the vast number of options and the lack of personalized guidance. Whether it’s a casual dinner or a special outing, users often struggle to find restaurants that truly match their tastes and budgets. To solve this, we have developed Restaurant Recommender AI, a chatbot that blends the conversational power of large language models with rule-based filtering mechanisms to provide accurate, relevant, and tailored restaurant suggestions effortlessly.
 
