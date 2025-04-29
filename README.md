@@ -44,6 +44,7 @@ Major functions behind the Chatbot Let's now look at a brief overview of the maj
 ** initialize_conv_reco(): Initializes the recommendations conversation
 
 **Part 3:** 
+
 Implementation Implementing Intent Clarity & Intent Confirmation layers Let's start with the first part of the implementation - building the intent clarity and intent confirmation layers. 
 
 As mentioned earlier, this layer helps in identifying the user requirements and passing it on to the product matching layer. Here are the functions that we would be using for building these layers:
