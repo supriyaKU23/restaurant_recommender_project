@@ -50,6 +50,7 @@ Implementation Implementing Intent Clarity & Intent Confirmation layers Let's st
 As mentioned earlier, this layer helps in identifying the user requirements and passing it on to the product matching layer. Here are the functions that we would be using for building these layers:
 
 initialize_conversation(): This initializes the variable conversation with the system message. used prompt engineering and chain of thought reasoning, the function will enable the chatbot to keep asking questions until the user requirements have been captured in a dictionary. It also includes Few Shot Prompting(sample conversation between the user and assistant) to align the model about user and assistant responses at each step.
+
 intent_confirmation_layer(): This function takes the assistant's response and evaluates if the chatbot has captured the user's profile clearly. Specifically, this checks if the following properties for the user has been captured or not
 Country
 City
@@ -59,8 +60,10 @@ Price Preference
 **Implementing dictionary present & moderation checks**
 
 dictionary_present(): This function checks if the final understanding of user's profile is returned by the chatbot is a Python dictionary or not. This is important as it'll be used later on for finding the right restaurants using dictionary matching.
+
 moderation_check(): This checks if the user's or the assistant's message is inappropriate. If any of these is inappropriate, one can add a break statement to end the conversation.
 Implementing Product mapping and information extraction layer 
+
 In this section, we take in the output of the previous layers, i.e. the user requirements, which is in the format of a Python dictionary, and extract the relevant restaurant recommendations based on that. Here are the functions that we will use to help us implement the information extraction and product matching layers
 
 product_map_layer(): This function is responsible for extracting key features and criteria from restaurant dataset. Here's a breakdown of how it works:
