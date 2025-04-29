@@ -63,7 +63,7 @@ dictionary_present(): This function checks if the final understanding of user's 
 
 moderation_check(): This checks if the user's or the assistant's message is inappropriate. If any of these is inappropriate, one can add a break statement to end the conversation.
 
-**Implementing Product mapping and information extraction layer **
+**Implementing Product mapping and information extraction layer**
 
 In this section, we take in the output of the previous layers, i.e. the user requirements, which is in the format of a Python dictionary, and extract the relevant restaurant recommendations based on that. 
 
