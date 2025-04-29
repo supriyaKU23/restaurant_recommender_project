@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Recommender Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f8;
+            margin: 0;
+            padding: 0;
+        }
+        .chatbox {
+            width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .message {
+            margin: 10px 0;
+            max-width: 80%;
+            padding: 10px;
+            border-radius: 10px;
+            clear: both;
+        }
+        .bot {
+            background: #e0e0e0;
+            float: left;
+        }
+        .user {
+            background: #d1f5d3;
+            float: right;
+        }
+        .input-area {
+            margin-top: 20px;
+            display: flex;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chatbox">
+    <h2>🍽️ Restaurant Recommender</h2>
+
+    <div style="height: 400px; overflow-y: scroll;">
+        {% for message in name_xyz %}
+            {% if message.user %}
+                <div class="message user"><strong>You:</strong> {{ message.user }}</div>
+            {% elif message.bot %}
+                <div class="message bot"><strong>Bot:</strong> {{ message.bot }}</div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <form action="{{ url_for('invite') }}" method="post" class="input-area">
+        <input type="text" name="user_input" placeholder="Type your message..." required autofocus>
+        <button type="submit">Send</button>
+    </form>
+
+    <form action="{{ url_for('end_conv') }}" method="post" style="margin-top: 10px;">
+        <button type="submit">End Conversation</button>
+    </form>
+
+</div>
+
+</body>
+</html>
