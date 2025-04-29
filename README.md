@@ -69,7 +69,8 @@ compare_restaurant_with_user(): This function compares the user's profile with t
 1. It will take the user requirements dictionary as input
 2. Filter the restaurants based on the users input
 3. Return the matching restaurants as a JSON-formatted string.
-4. Product Recommendation Layer
+   
+**Product Recommendation Layer**
 
 Finally, we come to the product recommendation layer. It takes the output from the compare_restaurant_with_user function in the previous layer and provides the recommendations to the user. 
 It has the following steps.
@@ -78,6 +79,19 @@ It has the following steps.
 2. Generate the recommendations and display in a presentable format.
 3. Ask questions basis the recommendations.
 
-Dialogue management System 
+**Dialogue management System**
 
 Bringing everything together, we create a diagloue_mgmt_system() function that contains the logic of how the different layers would interact with each other. This will be the function that we'll call to initiate the chatbot User Interface Finally all the functions above are encompassed together into a UI using the Flask framework. This helps in seamless interaction between the bot and the user.
+
+**Chatbot Functionalities , Limitations & Challenges**
+
+1. It can cater to offensive/prohibited content generated from both user and assistant through moderation checks
+2. Data has a limitation that city or country might not be present in dataset
+3. One limitation of the chatbot is that it looks for the exact value entered by the user in the database and returns if there are matching rows in the data. It is unable to recommend any alternatives to keep the user engaged.
+4. At the end, after all the details are fetched, user needs to enter exit to end the conversation
+5. Chatbot can handle a scenario where the user provides the requirements that do not match with the dataset and replies appropriately.
+6. One particular challenge faced was when I tried to increase the dataset size, the OpenAI timeout error was quite frequent. 
+7. Sometimes the bot still times out when trying to fetch the results, therefore please try again should you face any such errors.
+
+
+
